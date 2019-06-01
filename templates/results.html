@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<center>
+<h2>{{ the_title }}</h2>
+
+<p>Вы выбрали параметры:</p>
+<table>
+<tr><td>Улучшить:</td><td>{{ the_improv }}</td></tr>
+<tr><td>Ухудшится:</td><td>{{ the_deter }}</td></tr>
+</table>
+
+<p>Когда параметр "{{ the_improv }}" улучшается, то "{{ the_deter }}" ухудшается, чтобы разрешить этот конфликт требований
+используйте такие приемы, как:</p>
+<h3>{{ the_results }}</h3>
+</center>
+<!-- begin www.altshuller.ru-->
+<br /><a href="https://www.altshuller.ru/triz/technique1.asp"> Подробнее о приемах</a><br />
+<!-- end www.altshuller.ru-->
+{% endblock %}

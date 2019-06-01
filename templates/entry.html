@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<center>
+<h2>{{ the_title }}</h2>
+<form method='POST' action='/search4'>
+<table>
+<p>Выберите параметр который надо улучшить, и параметр, который при этом ухудшится.</p>
+<tr><td><p><strong>Улучшить:</strong></p></td><td></td><td><strong>Ухудшится:</strong></td></tr>
+<tr><td><input name='improv' value='01. Вес подвижного объекта' type='radio'>01. Вес подвижного объекта<Br></td>
+<td><center>-----------</center></td><td><input type='radio' name='deter' value='Вес подвижного объекта'>Вес подвижного объекта<Br></td></tr>
+<tr><td><input name='improv' value='02. Вес неподвижного объекта' type='radio'>02. Вес неподвижного объекта<Br></td>
+<td><center>-----------</center></td><td><input type='radio' name='deter' value='Вес неподвижного объекта'>Вес неподвижного объекта<Br></td></tr>
+<tr><td><input name='improv' value='03. Длина подвижного объекта' type='radio'>03. Длина подвижного объекта<Br></td>
+<td><center>-----------</center></td><td><input type='radio' name='deter' value='Длина подвижного объекта'>Длина подвижного объекта<Br></td></tr>
+<tr><td><input name='improv' value='04. Длина неподвижного объекта' type='radio'>04. Длина неподвижного объекта<Br></td>
+<td><center>-----------</center></td><td><input type='radio' name='deter' value='Длина неподвижного объекта'>Длина неподвижного объекта<Br></td></tr>
+<tr><td><input name='improv' value='05. Площадь подвижного объекта' type='radio'>05. Площадь подвижного объекта<Br></td>
+<td><center>-----------</center></td><td><input type='radio' name='deter' value='Площадь подвижного объекта'>Площадь подвижного объекта<Br></td></tr>
+<tr><td><input name='improv' value='06. Площадь неподвижного объекта' type='radio'>06. Площадь неподвижного объекта<Br></td>
+<td><center>-----------</center></td><td><input type='radio' name='deter' value='Площадь неподвижного объекта'>Площадь неподвижного объекта<Br></td></tr>
+<tr><td><input name='improv' value='07. Объем подвижного объекта' type='radio'>07. Объем подвижного объекта<Br></td>
+<td><center>-----------</center></td><td><input type='radio' name='deter' value='Объем подвижного объекта'>Объем подвижного объекта<Br></td></tr>
+<tr><td><input name='improv' value='08. Объем неподвижного объекта' type='radio'>08. Объем неподвижного объекта<Br></td>
+<td><center>-----------</center></td><td><input type='radio' name='deter' value='Объем неподвижного объекта'>Объем неподвижного объекта<Br></td></tr>
+<tr><td><input name='improv' value='09. Скорость' type='radio'>09. Скорость<Br></td>
+<td><center>-----------</center></td><td><input type='radio' name='deter' value='Скорость'>Скорость<Br></td></tr>
+<tr><td><input name='improv' value='10. Сила' type='radio'>10. Сила<Br></td>
+<td><center>-----------</center></td><td><input type='radio' name='deter' value='Сила'>Сила<Br></td></tr>
+<tr><td><input name='improv' value='11. Напряжение, давление' type='radio'>11. Напряжение, давление<Br></td>
+<td><center>-----------</center></td><td><input type='radio' name='deter' value='Напряжение, давление'>Напряжение, давление<Br></td></tr>
+<tr><td><input name='improv' value='12. Форма' type='radio'>12. Форма<Br></td>
+<td><center>-----------</center></td><td><input type='radio' name='deter' value='Форма'>Форма<Br></td></tr>
+<tr><td><input name='improv' value='13. Устойчивость состава объекта' type='radio'>13. Устойчивость состава объекта<Br></td>
+<td><center>-----------</center></td><td><input type='radio' name='deter' value='Устойчивость состава объекта'>Устойчивость состава объекта<Br></td></tr>
+<tr><td><input name='improv' value='14. Прочность' type='radio'>14. Прочность<Br></td>
+<td><center>-----------</center></td><td><input type='radio' name='deter' value='Прочность'>Прочность<Br></td></tr>
+<tr><td><input name='improv' value='15. Время действия подвижного объекта' type='radio'>15. Время действия подвижного объекта<Br></td>
+<td><center>-----------</center></td><td><input type='radio' name='deter' value='Время действия подвижного объекта'>Время действия подвижного объекта<Br></td></tr>
+<tr><td><input name='improv' value='16. Время действия неподвижного объекта' type='radio'>16. Время действия неподвижного объекта<Br></td>
+<td><center>-----------</center></td><td><input type='radio' name='deter' value='Время действия неподвижного объекта'>Время действия неподвижного объекта<Br></td></tr>
+<tr><td><input name='improv' value='17. Температура' type='radio'>17. Температура<Br></td>
+<td><center>-----------</center></td><td><input type='radio' name='deter' value='Температура'>Температура<Br></td></tr>
+<tr><td><input name='improv' value='18. Освещенность' type='radio'>18. Освещенность<Br></td>
+<td><center>-----------</center></td><td><input type='radio' name='deter' value='Освещенность'>Освещенность<Br></td></tr>
+<tr><td><input name='improv' value='19. Затраты энергии подвижным объектом' type='radio'>19. Затраты энергии подвижным объектом<Br></td>
+<td><center>-----------</center></td><td><input type='radio' name='deter' value='Затраты энергии подвижным объектом'>Затраты энергии подвижным объектом<Br></td></tr>
+<tr><td><input name='improv' value='20. Затраты энергии неподвижным объектом' type='radio'>20. Затраты энергии неподвижным объектом<Br></td>
+<td><center>-----------</center></td><td><input type='radio' name='deter' value='Затраты энергии неподвижным объектом'>Затраты энергии неподвижным объектом<Br></td></tr>
+<tr><td><input name='improv' value='21. Мощность' type='radio'>21. Мощность<Br></td>
+<td><center>-----------</center></td><td><input type='radio' name='deter' value='Мощность'>Мощность<Br></td></tr>
+<tr><td><input name='improv' value='22. Потери энергии' type='radio'>22. Потери энергии<Br></td>
+<td><center>-----------</center></td><td><input type='radio' name='deter' value='Потери энергии'>Потери энергии<Br></td></tr>
+<tr><td><input name='improv' value='23. Потери вещества' type='radio'>23. Потери вещества<Br></td>
+<td><center>-----------</center></td><td><input type='radio' name='deter' value='Потери вещества'>Потери вещества<Br></td></tr>
+<tr><td><input name='improv' value='24. Потери информации' type='radio'>24. Потери информации<Br></td>
+<td><center>-----------</center></td><td><input type='radio' name='deter' value='Потери информации'>Потери информации<Br></td></tr>
+<tr><td><input name='improv' value='25. Потери времени' type='radio'>25. Потери времени<Br></td>
+<td><center>-----------</center></td><td><input type='radio' name='deter' value='Потери времени'>Потери времени<Br></td></tr>
+<tr><td><input name='improv' value='26. Количество вещества' type='radio'>26. Количество вещества<Br></td>
+<td><center>-----------</center></td><td><input type='radio' name='deter' value='Количество вещества'>Количество вещества<Br></td></tr>
+<tr><td><input name='improv' value='27. Надежность' type='radio'>27. Надежность<Br></td>
+<td><center>-----------</center></td><td><input type='radio' name='deter' value='Надежность'>Надежность<Br></td></tr>
+<tr><td><input name='improv' value='28. Точность измерения' type='radio'>28. Точность измерения<Br></td>
+<td><center>-----------</center></td><td><input type='radio' name='deter' value='Точность измерения'>Точность измерения<Br></td></tr>
+<tr><td><input name='improv' value='29. Точность изготовления' type='radio'>29. Точность изготовления<Br></td>
+<td><center>-----------</center></td><td><input type='radio' name='deter' value='Точность изготовления'>Точность изготовления<Br></td></tr>
+<tr><td><input name='improv' value='30. Вредные факторы, действующие на объект' type='radio'>30. Вредные факторы, действующие на объект<Br></td>
+<td><center>-----------</center></td><td><input type='radio' name='deter' value='Вредные факторы, действующие на объект'>Вредные факторы, действующие на объект<Br></td></tr>
+<tr><td><input name='improv' value='31. Вредные факторы самого объекта' type='radio'>31. Вредные факторы самого объекта<Br></td>
+<td><center>-----------</center></td><td><input type='radio' name='deter' value='Вредные факторы самого объекта'>Вредные факторы самого объекта<Br></td></tr>
+<tr><td><input name='improv' value='32. Удобство изготовления' type='radio'>32. Удобство изготовления<Br></td>
+<td><center>-----------</center></td><td><input type='radio' name='deter' value='Удобство изготовления'>Удобство изготовления<Br></td></tr>
+<tr><td><input name='improv' value='33. Удобство эксплуатации' type='radio'>33. Удобство эксплуатации<Br></td>
+<td><center>-----------</center></td><td><input type='radio' name='deter' value='Удобство эксплуатации'>Удобство эксплуатации<Br></td></tr>
+<tr><td><input name='improv' value='34. Удобство ремонта' type='radio'>34. Удобство ремонта<Br></td>
+<td><center>-----------</center></td><td><input type='radio' name='deter' value='Удобство ремонта'>Удобство ремонта<Br></td></tr>
+<tr><td><input name='improv' value='35. Адаптация, универсальность' type='radio'>35. Адаптация, универсальность<Br></td>
+<td><center>-----------</center></td><td><input type='radio' name='deter' value='Адаптация, универсальность'>Адаптация, универсальность<Br></td></tr>
+<tr><td><input name='improv' value='36. Сложность устройства' type='radio'>36. Сложность устройства<Br></td>
+<td><center>-----------</center></td><td><input type='radio' name='deter' value='Сложность устройства'>Сложность устройства<Br></td></tr>
+<tr><td><input name='improv' value='37. Сложность контроля и измерения' type='radio'>37. Сложность контроля и измерения<Br></td>
+<td><center>-----------</center></td><td><input type='radio' name='deter' value='Сложность контроля и измерения'>Сложность контроля и измерения<Br></td></tr>
+<tr><td><input name='improv' value='38. Степень автоматизации' type='radio'>38. Степень автоматизации<Br></td>
+<td><center>-----------</center></td><td><input type='radio' name='deter' value='Степень автоматизации'>Степень автоматизации<Br></td></tr>
+<tr><td><input name='improv' value='39. Производительность' type='radio'>39. Производительность<Br></td>
+<td><center>-----------</center></td><td><input type='radio' name='deter' value='Производительность'>Производительность<Br></td></tr>
+
+</table>
+<p>Если выбрали, нажмите эту кнопку:</p>
+<p><input value='Выполнить!' type='SUBMIT'></p>
+</form>
+</center>
+
+{% endblock %}
